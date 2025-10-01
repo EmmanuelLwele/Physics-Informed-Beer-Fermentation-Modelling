@@ -99,3 +99,118 @@ where:
 ├── run_experiment.py     # Entry point for training
 ├── evaluate.py           # Evaluate trained models
 └── README.md             # Project documentation
+
+---
+
+# 📑 Thesis Information  
+
+## 🎓 Thesis Title  
+**Physics-Informed Surrogate Modelling and Digital Twin Development for Bioprocess Optimization**
+
+---
+
+## 📝 Abstract  
+
+The accurate modelling of yeast fermentation remains a critical challenge in both the brewing and biotechnology sectors. Traditional mechanistic models, such as Monod-type kinetic equations, provide valuable insights into substrate utilization and biomass growth but often suffer from limited flexibility and the need for extensive parameter calibration. Conversely, purely data-driven machine learning approaches, including recurrent neural networks, offer predictive accuracy but lack interpretability and generalization beyond the training domain.  
+
+In this study, we introduce **Physics-Informed Neural Networks (PINNs)** as a hybrid modelling framework for single yeast fermentation. By embedding mass-balance equations governing sugar consumption, biomass growth, and ethanol production into the neural network loss function, the PINN framework ensures that predictions remain consistent with known physical laws while fitting experimental data.  
+
+Two laboratory-scale fermentation experiments were performed using *Saccharomyces cerevisiae* (SafAle US-05) and *Saccharomyces pastorianus* (SafLager S-23), where specific gravity, pH, and temperature were measured across a 300 h fermentation period. The trained PINNs successfully captured the dynamic behaviour of both yeast strains, demonstrating strong agreement with experimental profiles and enhanced extrapolation capabilities compared to baseline black-box models.  
+
+These findings highlight the potential of PINNs as a robust and interpretable modelling tool for fermentation processes, paving the way for their integration into advanced control and optimization strategies in food, beverage, and bioprocess industries.  
+
+**Keywords:** Physics-Informed Neural Networks (PINNs); fermentation modelling; yeast dynamics; *Saccharomyces cerevisiae*; *Saccharomyces pastorianus*; bioprocess systems  
+
+---
+
+## 📚 Thesis Contents  
+
+### 1. Introduction  
+1.1 Background  
+1.2 Research Motivation  
+1.3 Research Objectives  
+1.4 Aims and Contributions  
+1.5 Thesis Structure  
+
+### 2. Literature Review  
+2.1 Beer Fermentation: Overview and Bioprocess Challenges  
+2.2 Mathematical Modelling of Bioprocess Systems  
+2.3 Surrogate Modelling Approaches for Bioprocess Systems  
+2.4 Physics-Informed Neural Networks (PINNs)  
+- 2.4.1 Mathematical Formulation of PINNs (ODEs/PDEs in PINNs)  
+- 2.4.2 PINNs for ODEs, PDEs, and Dynamic Systems  
+- 2.4.3 Loss Functions and Physical Constraints  
+- 2.4.4 Variants: Bayesian PINNs, Adaptive PINNs  
+2.5 PINNs for Complex Systems Modelling  
+- 2.5.1 Architecture of PINNs and Custom Loss Functions  
+- 2.5.2 Types of PINNs: Classical, Bayesian, and Hybrid Approaches  
+2.6 Applications of PINNs in Food & Drink Manufacturing Processes  
+- 2.6.1 Bioprocessing, Biomedical, and Environmental Systems  
+- 2.6.2 Beer Fermentation & Bioprocessing  
+2.7 Integration of PINNs within Digital Twin Technologies  
+- 2.7.1 Digital Twins in Bioprocessing and Beer Fermentation  
+- 2.7.2 Architecture and Core Components  
+- 2.7.3 Real-Time Constraints and Surrogate Modelling  
+- 2.7.4 Use-Cases in Industry  
+2.8 Uncertainty Quantification in Surrogate Models  
+- 2.8.1 Methods, Challenges, and Open Questions  
+- 2.8.2 Opportunities in Bioprocess Digital Twins  
+2.9 Summary, Research Gaps and Research Questions  
+
+### 3. Mathematical Formulation and Physical Principles  
+3.1 Governing Equations in Beer Fermentation Processes  
+- Substrate & Product Balances  
+- Biomass Growth Kinetics (Monod & Beyond)  
+3.2 PDEs in Fermentation Dynamics  
+- Mass Transport (Advection-Diffusion-Reaction)  
+- Fluid Flow and Mixing (Simplified Navier-Stokes)  
+3.3 Dimensional Analysis and Non-Dimensional Parameters  
+3.4 Formulation of Physics-Informed Surrogate Models  
+3.5 Generalized PINN Framework for Dynamic Systems  
+3.6 Problem Constraints, Boundary and Initial Conditions  
+
+### 4. Development of Physics-Informed Surrogate Models  
+- Modular Framework Design  
+- Data Collection & Preprocessing  
+- Active Learning & Sampling Strategies  
+- Neural Network Architecture, Training Algorithms  
+- Performance Metrics & Uncertainty Evaluation  
+- Comparisons: PINNs vs GP, Random Forests, RNNs  
+
+### 5. Experimental Validation and Case Studies  
+- Beer Fermentation with Transport PDEs  
+- Physical + Mathematical Model Setup  
+- Simulation Configuration & Validation  
+- Surrogate Model Results & Comparative Evaluation  
+
+### 6. Digital Twin Framework for Beer Brewing Process Optimization  
+- System Architecture  
+- Real-Time Data Integration  
+- Deployment in Industrial Brewing  
+- Comparison with Existing Digital Twin Approaches  
+
+### 7. Results and Analysis  
+- Model Accuracy & Performance  
+- Robustness and Generalisation  
+- Uncertainty Estimation  
+- Computational Cost & Scalability  
+- Interpretability of Physics-Informed Layers  
+
+### 8. Discussion  
+- Key Findings  
+- Contributions to Surrogate Modelling & Digital Twins  
+- Limitations and Challenges  
+- Future Research Directions  
+
+### 9. Conclusion  
+- Summary of Contributions  
+- Industrial Implications  
+- Broader Impact  
+
+### Appendices  
+- A: Additional Experimental Data  
+- B: Mathematical Derivations & Analytical Comparisons  
+- C: Source Code and Implementation Details  
+- D: Glossary of PINN Terms and Domain-Specific Adaptations  
+
+---
