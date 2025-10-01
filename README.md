@@ -35,38 +35,46 @@ Traditional kinetic models (e.g., Monod-type) offer mechanistic insights but str
 
 ## 🔬 Methodology  
 
+
+
+### PINN Loss Function  
+
+### PINN Loss Function  
+
+$$
+\mathcal{L} = \lambda_\text{data}\,\mathcal{L}_\text{data} + \lambda_\text{physics}\,\mathcal{L}_\text{residual}
+$$  
+
+- **Data Loss**: Mean Squared Error (MSE) between model predictions and experimental data  
+- **Physics Loss**: Residuals of fermentation ODEs enforced at collocation points  
+
+
+
 ### Governing Equations  
 
 We consider a simplified fermentation system:  
 
-\[
-\frac{dS}{dt} = -\frac{1}{Y_{X/S}} \mu(S,T,pH) X
-\]  
+$$
+\frac{dS}{dt} = -\frac{1}{Y_{X/S}} \mu(S, T, pH)\, X
+$$  
 
-\[
-\frac{dX}{dt} = \mu(S,T,pH) X - k_d X
-\]  
+$$
+\frac{dX}{dt} = \mu(S, T, pH)\, X - k_d X
+$$  
 
-\[
-\frac{dP}{dt} = Y_{P/X} \mu(S,T,pH) X
-\]  
+$$
+\frac{dP}{dt} = Y_{P/X}\, \mu(S, T, pH)\, X
+$$  
 
 where:  
-- \(S\): Substrate (sugar) concentration  
-- \(X\): Biomass (yeast) concentration  
-- \(P\): Product (ethanol) concentration  
-- \(\mu(S,T,pH)\): Specific growth rate (temperature & pH dependent)  
-- \(Y_{X/S}, Y_{P/X}\): Yield coefficients  
-- \(k_d\): Death rate constant  
 
-### PINN Loss Function  
+- $S$: Substrate (sugar) concentration  
+- $X$: Biomass (yeast) concentration  
+- $P$: Product (ethanol) concentration  
+- $\mu(S, T, pH)$: Specific growth rate (temperature & pH dependent)  
+- $Y_{X/S}, Y_{P/X}$: Yield coefficients  
+- $k_d$: Death rate constant  
 
-\[
-\mathcal{L} = \lambda_\text{data}\,\mathcal{L}_\text{data} + \lambda_\text{physics}\,\mathcal{L}_\text{residual}
-\]  
-
-- **Data Loss** → Mean Squared Error (MSE) between predicted & observed concentrations  
-- **Physics Loss** → Residuals of fermentation ODEs enforced at collocation points  
 
 ---
 
