@@ -80,3 +80,22 @@ where:
 
 ## 📂 Repository Structure  
 
+```text
+├── data/                 # Raw & processed fermentation datasets
+├── src/
+│   ├── data_loader.py    # Data preprocessing and batching
+│   ├── models/
+│   │   ├── pinn.py       # Physics-Informed Neural Network
+│   │   ├── rnn.py        # RNN (LSTM/GRU) baseline
+│   │   ├── gp.py         # Gaussian Process baseline
+│   │   └── rf.py         # Random Forest baseline
+│   ├── losses.py         # Data + physics-informed losses
+│   ├── train.py          # Training engine
+│   ├── evaluate.py       # Evaluation pipeline
+│   └── utils/            # Seeds, logging, plotting, checkpointing
+├── configs/              # YAML/JSON configs for experiments
+├── notebooks/            # Exploratory notebooks for results & plots
+├── requirements.txt      # Dependencies
+├── run_experiment.py     # Entry point for training
+├── evaluate.py           # Evaluate trained models
+└── README.md             # Project documentation
