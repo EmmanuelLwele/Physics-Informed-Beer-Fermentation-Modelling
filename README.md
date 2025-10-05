@@ -214,3 +214,39 @@ These findings highlight the potential of PINNs as a robust and interpretable mo
 - D: Glossary of PINN Terms and Domain-Specific Adaptations  
 
 ---
+
+# Physics-Informed Beer Fermentation Modelling (PINNs)
+
+**Purpose:**  
+This notebook demonstrates the implementation of **Physics-Informed Neural Networks (PINNs)** and baseline surrogate models for **beer fermentation kinetics**. The goal is to integrate **mechanistic fermentation equations** (sugar consumption, biomass growth, ethanol production) with **experimental data** to build a robust **digital twin** of the fermentation process.
+
+**Key Features:**
+- Physics-informed modelling using **ODE-based loss functions**.
+- Comparison with baseline models: **Random Forests, Gaussian Processes, RNN/LSTM/GRU**.
+- Flexible framework for **training, evaluation, and visualization**.
+- Supports **real-time prediction** for digital twin applications.
+
+**Experimental Setup:**
+- Fermentation data collected from *Saccharomyces cerevisiae* (US-05) and *Saccharomyces pastorianus* (S-23).
+- Measurements include: **specific gravity, pH, and temperature** over a 300 h period.
+
+**Notebook Structure:**
+1. **Data Loading & Preprocessing** — Prepare datasets for PINN and baseline models.
+2. **Model Definition** — Define PINN architecture, custom loss, and baseline ML models.
+3. **Training** — Optimize PINN and baselines with multi-term loss and physics constraints.
+4. **Evaluation & Visualization** — Compare predicted fermentation curves with experimental data.
+5. **Surrogate Model Integration** — Showcase trained models for potential digital twin deployment.
+
+**References:**
+- Emmanuel Lwele, *Physics-Informed Surrogate Modelling and Digital Twin Development for Bioprocess Optimization*, Sheffield Hallam University, 2025.
+- PINNs literature: Raissi et al., 2019; Karniadakis et al., 2021.
+
+---
+
+## 📊 Illustrations  
+
+<p align="center">
+  <img src="images/fermentation_tanks.png." alt="Fermentation Tanks" width="45%"/>
+  <img src="images/IPA-vs-Pale-Ale.png" alt="IPA vs Pale" width="45%"/>
+</p>
+
