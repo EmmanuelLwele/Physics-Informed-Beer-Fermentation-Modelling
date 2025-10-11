@@ -39,8 +39,6 @@ Traditional kinetic models (e.g., Monod-type) offer mechanistic insights but str
 
 ### PINN Loss Function  
 
-### PINN Loss Function  
-
 $$
 \mathcal{L} = \lambda_\text{data}\,\mathcal{L}_\text{data} + \lambda_\text{physics}\,\mathcal{L}_\text{residual}
 $$  
@@ -242,11 +240,3 @@ This notebook demonstrates the implementation of **Physics-Informed Neural Netwo
 - PINNs literature: Raissi et al., 2019; Karniadakis et al., 2021.
 
 ---
-
-## 📊 Illustrations  
-
-<p align="center">
-  <img src="images/fermentation_tanks.png." alt="Fermentation Tanks" width="45%"/>
-  <img src="images/IPA-vs-Pale-Ale.png" alt="IPA vs Pale" width="45%"/>
-</p>
-
