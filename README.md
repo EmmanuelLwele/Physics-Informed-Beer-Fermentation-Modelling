@@ -53,25 +53,29 @@ $$
 We consider a simplified fermentation system:  
 
 $$
-\frac{dS}{dt} = -\frac{1}{Y_{X/S}} \mu(S, T, pH)\, X
+\mu(t) = \mu_{\max} \cdot \frac{C_{s}(t)}{k_{s} + C_{s}(t)} \cdot \Big(1 - e^{-\tfrac{t}{L}}\Big)
+$$
+
+$$
+\frac{dX(t)}{dt} = \mu(t) \cdot X(t)
 $$  
 
 $$
-\frac{dX}{dt} = \mu(S, T, pH)\, X - k_d X
+\frac{dC_{s}(t)}{dt} = -\frac{1}{Y_{x/s}} \cdot \frac{dX(t)}{dt} = -\frac{1}{Y_{x/s}} \cdot \mu(t) \cdot X(t)
 $$  
 
 $$
-\frac{dP}{dt} = Y_{P/X}\, \mu(S, T, pH)\, X
+\frac{dC_{e}(t)}{dt} = \frac{Y_{e/s}}{Y_{x/s}} \cdot \frac{dX(t)}{dt} = \frac{Y_{e/s}}{Y_{x/s}} \cdot \mu(t) \cdot X(t)
 $$  
 
 where:  
 
-- $S$: Substrate (sugar) concentration  
+- $C_{s}$: Substrate (sugar) concentration  
 - $X$: Biomass (yeast) concentration  
-- $P$: Product (ethanol) concentration  
-- $\mu(S, T, pH)$: Specific growth rate (temperature & pH dependent)  
-- $Y_{X/S}, Y_{P/X}$: Yield coefficients  
-- $k_d$: Death rate constant  
+- $C_{e}$: Product (ethanol) concentration  
+- $\mu(t)$: Specific growth rate (time dependent)  
+- $Y_{x/S}, Y_{e/X}$: Yield coefficients  
+- $k_s$: Half-velocity constant 
 
 
 ---
