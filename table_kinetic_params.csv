@@ -1,0 +1,9 @@
+Parameter,Symbol,Source,Value,Literature range
+mu_ref (h-1),mu_ref,Learned,0.1969,0.1-0.5
+Ea/R (K),Ea/R,Learned,8.3,3000-8000
+Ks (g/L),Ks,Learned,2.417,5-30
+Ki (g/L),Ki,Learned,4.58,50-300
+Ke_inh (g/L),"Ke,inh",Learned,4.19,30-100
+L (h),L,Learned,2.42,5-20
+Y_X/S (g/g),Yxs,Learned,0.0979,0.05-0.15
+"Y_E/S (g/g, fixed)",Y_E/S,Fixed (Gay-Lussac),0.511,0.511

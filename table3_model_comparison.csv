@@ -1,0 +1,9 @@
+Variable,Model,R2,RMSE (g/L),MAE (g/L),Note
+Cs,PINN,0.9999,0.38,0.226,
+Cs,RF,0.9999,0.308,0.067,
+Cs,GP,0.945,8.829,3.584,
+Cs,LSTM,0.9999,0.394,0.259,from t>=2h (look-back=10)
+Ce,PINN,0.9999,0.225,0.138,
+Ce,RF,0.9999,0.157,0.031,
+Ce,GP,0.9451,4.508,1.829,
+Ce,LSTM,0.9998,0.234,0.158,from t>=2h (look-back=10)
