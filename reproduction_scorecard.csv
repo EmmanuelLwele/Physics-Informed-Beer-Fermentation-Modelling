@@ -1,0 +1,14 @@
+Claim,Manuscript,This notebook,Verdict
+Gmin reformulation improves fit,R2: 0.63-0.89 -> >0.99,0.576-0.654 -> 0.9917-0.9933,PASS - reproduced
+eta(t) peaks at lag->exponential (0-30 h),peak in 0-30 h,peak at 22.7 h,PASS - reproduced
+All 5 strategies reach gravity R2 > 0.997,all > 0.997,0.9968-0.9976,FAIL
+Random sampling is the weakest strategy,Random shows largest degradation,worst = Random,PASS - reproduced
+Phase-stratified matches dense-data accuracy,Phase-Strat == Dense,PS=0.9972 vs Dense=0.9971,PASS - reproduced
+Physics-aware sampling self-regularises (lower CV),"CV: adaptive/hybrid <0.10, phase 0.12 vs uniform 0.32 / random 0.45","ordering reproduced (Uniform=0.05, Phase-Strat=0.07, Random=0.14, Hybrid=0.17, Adaptive=0.23); absolute CVs higher",FAIL
+Loss well-posed at extreme physics weight,implied: flat RMSE response out to lambda_p/lambda_d = 100,all strategies collapse to RMSE~1.04 degP at ratio=100,FAIL
+Phase-stratified needs ~33% fewer samples than uniform,~33% fewer than uniform,0% fewer than uniform,FAIL
+Random extrapolates worst,random shows visible drift beyond training horizon,worst forecast = Adaptive,FAIL
+R2_ext > 0.85 under extrapolation,R2_ext > 0.85,R2_ext degenerate (target std=0.034 degP); RMSE_ext=0.039-0.809 degP,INCONCLUSIVE
+ODE generalises across ale and lager (R2 > 0.98),"SA-05 R2=0.998, SL-23 R2=0.988","SA-05 R2=0.9933, SL-23 R2=0.9917",PASS - reproduced
+Lager mu_eff is an order of magnitude below ale,0.634 vs 0.013 (~49x),0.778 vs 0.202 (~4x),FAIL
+Ks/L are weakly identifiable (paper's own caveat),§8: Ks and L exhibit partial collinearity,R2 varies only 0.0055 across an 80x range of Ks,PASS - reproduced
